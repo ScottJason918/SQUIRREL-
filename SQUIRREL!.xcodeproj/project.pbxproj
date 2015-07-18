@@ -13,6 +13,8 @@
 		33ADEFC61B57455600B28E1E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 33ADEFC51B57455600B28E1E /* Images.xcassets */; };
 		33ADEFC91B57455600B28E1E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33ADEFC71B57455600B28E1E /* LaunchScreen.xib */; };
 		33ADEFD51B57455600B28E1E /* SQUIRREL_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33ADEFD41B57455600B28E1E /* SQUIRREL_Tests.swift */; };
+		33ADEFE61B588DFE00B28E1E /* NotePad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33ADEFE51B588DFE00B28E1E /* NotePad.swift */; };
+		33ADEFE81B588FAB00B28E1E /* NotePad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33ADEFE71B588FAB00B28E1E /* NotePad.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,8 @@
 		33ADEFCE1B57455600B28E1E /* SQUIRREL!Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SQUIRREL!Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		33ADEFD31B57455600B28E1E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		33ADEFD41B57455600B28E1E /* SQUIRREL_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SQUIRREL_Tests.swift; sourceTree = "<group>"; };
+		33ADEFE51B588DFE00B28E1E /* NotePad.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotePad.swift; sourceTree = "<group>"; };
+		33ADEFE71B588FAB00B28E1E /* NotePad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NotePad.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +86,7 @@
 				33ADEFC21B57455600B28E1E /* Main.storyboard */,
 				33ADEFC51B57455600B28E1E /* Images.xcassets */,
 				33ADEFC71B57455600B28E1E /* LaunchScreen.xib */,
+				33ADEFE41B588D9F00B28E1E /* ExtendedClasses */,
 				33ADEFBC1B57455600B28E1E /* Supporting Files */,
 			);
 			path = "SQUIRREL!";
@@ -110,6 +115,15 @@
 				33ADEFD31B57455600B28E1E /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		33ADEFE41B588D9F00B28E1E /* ExtendedClasses */ = {
+			isa = PBXGroup;
+			children = (
+				33ADEFE51B588DFE00B28E1E /* NotePad.swift */,
+				33ADEFE71B588FAB00B28E1E /* NotePad.xib */,
+			);
+			name = ExtendedClasses;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -192,6 +206,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				33ADEFE81B588FAB00B28E1E /* NotePad.xib in Resources */,
 				33ADEFC41B57455600B28E1E /* Main.storyboard in Resources */,
 				33ADEFC91B57455600B28E1E /* LaunchScreen.xib in Resources */,
 				33ADEFC61B57455600B28E1E /* Images.xcassets in Resources */,
@@ -213,6 +228,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				33ADEFC11B57455600B28E1E /* ViewController.swift in Sources */,
+				33ADEFE61B588DFE00B28E1E /* NotePad.swift in Sources */,
 				33ADEFBF1B57455600B28E1E /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -411,6 +427,7 @@
 				33ADEFDA1B57455600B28E1E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		33ADEFDB1B57455600B28E1E /* Build configuration list for PBXNativeTarget "SQUIRREL!Tests" */ = {
 			isa = XCConfigurationList;
@@ -419,6 +436,7 @@
 				33ADEFDD1B57455600B28E1E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
