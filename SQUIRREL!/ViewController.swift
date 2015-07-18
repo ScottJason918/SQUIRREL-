@@ -22,7 +22,7 @@ class ViewController: UIViewController {
     }
 
     //MARK: - Interface Interaction Methods -
-    
+    ///Creating Note Pads
     @IBAction func createNotePad(){
         let notePad : NotePad = NotePad().createInView(self.view);
         notePad.transform = CGAffineTransformMakeScale(0, 0);
@@ -43,6 +43,8 @@ class ViewController: UIViewController {
     
     //MARK: - Gesture Recognition Methods -
     
+    
+    //Making the notepads draggable
     func setupGestureRecognizers() {
         let moveNotePanGR : UIPanGestureRecognizer = UIPanGestureRecognizer(target: self, action: "panRecognized:");
         self.view.addGestureRecognizer(moveNotePanGR);
@@ -59,7 +61,6 @@ class ViewController: UIViewController {
                     }
                 }
             }
-            println("began")
                 break;
             
         case .Changed:

@@ -11,11 +11,13 @@ import UIKit
 
 public class NotePad: UIView {
     
+    ///Button Outlets
     @IBOutlet var noteBtn: UIButton!
     @IBOutlet var saveBtn: UIButton!
     @IBOutlet var deleteBtn: UIButton!
     var parentView : UIView!
     
+    ///Creating Note Pad Views
     public func createInView(aView : UIView) -> NotePad{
         var xibArray : NSArray = NSBundle.mainBundle().loadNibNamed("NotePad", owner: self, options: nil);
         let notePad : NotePad = xibArray[0] as! NotePad;
@@ -23,7 +25,7 @@ public class NotePad: UIView {
         notePad.parentView = aView;
         return notePad;
     };
-    
+    ///Action for Touching Note Pads and Buttons
     @IBAction func notePressed(){
         UIView.animateWithDuration(0.35, delay: 0.0, options: .CurveEaseIn, animations: { () -> Void in
             self.center = self.parentView.center;
