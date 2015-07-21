@@ -10,9 +10,11 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    @IBOutlet var clockLabel : UILabel!
     @IBOutlet var addBtn : UIButton!
     var heldNotePad : NotePad!
-
+    
+    
     //MARK: - View Lifecycle -
     
     override func viewDidLoad() {

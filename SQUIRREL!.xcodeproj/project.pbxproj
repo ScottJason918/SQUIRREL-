@@ -15,6 +15,8 @@
 		33ADEFD51B57455600B28E1E /* SQUIRREL_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33ADEFD41B57455600B28E1E /* SQUIRREL_Tests.swift */; };
 		33ADEFE61B588DFE00B28E1E /* NotePad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33ADEFE51B588DFE00B28E1E /* NotePad.swift */; };
 		33ADEFE81B588FAB00B28E1E /* NotePad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33ADEFE71B588FAB00B28E1E /* NotePad.xib */; };
+		33E3200B1B5DD2F40096351D /* NoteObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E3200A1B5DD2F40096351D /* NoteObject.swift */; };
+		33E3200D1B5DDFC30096351D /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E3200C1B5DDFC30096351D /* Helper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,10 @@
 		33ADEFD41B57455600B28E1E /* SQUIRREL_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SQUIRREL_Tests.swift; sourceTree = "<group>"; };
 		33ADEFE51B588DFE00B28E1E /* NotePad.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotePad.swift; sourceTree = "<group>"; };
 		33ADEFE71B588FAB00B28E1E /* NotePad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NotePad.xib; sourceTree = "<group>"; };
+		33E320081B5DCC690096351D /* DS-DIGII.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DS-DIGII.TTF"; sourceTree = "<group>"; };
+		33E3200A1B5DD2F40096351D /* NoteObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteObject.swift; sourceTree = "<group>"; };
+		33E3200C1B5DDFC30096351D /* Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
+		33E3200E1B5EB26C0096351D /* DS-DIGI.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DS-DIGI.TTF"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +92,7 @@
 				33ADEFC21B57455600B28E1E /* Main.storyboard */,
 				33ADEFC51B57455600B28E1E /* Images.xcassets */,
 				33ADEFC71B57455600B28E1E /* LaunchScreen.xib */,
+				33E320091B5DCD4F0096351D /* Fonts */,
 				33ADEFE41B588D9F00B28E1E /* ExtendedClasses */,
 				33ADEFBC1B57455600B28E1E /* Supporting Files */,
 			);
@@ -121,9 +128,20 @@
 			isa = PBXGroup;
 			children = (
 				33ADEFE51B588DFE00B28E1E /* NotePad.swift */,
+				33E3200A1B5DD2F40096351D /* NoteObject.swift */,
+				33E3200C1B5DDFC30096351D /* Helper.swift */,
 				33ADEFE71B588FAB00B28E1E /* NotePad.xib */,
 			);
 			name = ExtendedClasses;
+			sourceTree = "<group>";
+		};
+		33E320091B5DCD4F0096351D /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				33E3200E1B5EB26C0096351D /* DS-DIGI.TTF */,
+				33E320081B5DCC690096351D /* DS-DIGII.TTF */,
+			);
+			name = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -227,7 +245,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				33E3200B1B5DD2F40096351D /* NoteObject.swift in Sources */,
 				33ADEFC11B57455600B28E1E /* ViewController.swift in Sources */,
+				33E3200D1B5DDFC30096351D /* Helper.swift in Sources */,
 				33ADEFE61B588DFE00B28E1E /* NotePad.swift in Sources */,
 				33ADEFBF1B57455600B28E1E /* AppDelegate.swift in Sources */,
 			);

@@ -12,6 +12,9 @@ import UIKit
 public class NotePad: UIView {
     
     ///Button Outlets
+    @IBOutlet var taskField: UITextField!
+    @IBOutlet var timeField : UITextField!
+    @IBOutlet var descriptionField : UITextView!
     @IBOutlet var noteBtn: UIButton!
     @IBOutlet var saveBtn: UIButton!
     @IBOutlet var deleteBtn: UIButton!
@@ -29,7 +32,11 @@ public class NotePad: UIView {
     @IBAction func notePressed(){
         UIView.animateWithDuration(0.35, delay: 0.0, options: .CurveEaseIn, animations: { () -> Void in
             self.center = self.parentView.center;
+            self.taskField.userInteractionEnabled = true;
+            self.timeField.userInteractionEnabled = true;
+            self.descriptionField.userInteractionEnabled = true;
             self.transform = CGAffineTransformMakeScale(1, 1);
+            self.parentView.bringSubviewToFront(self)
         }) { (Bool) -> Void in
             self.noteBtn.enabled = false;
         };
@@ -38,6 +45,9 @@ public class NotePad: UIView {
     @IBAction func savePressed(){
         
         noteBtn.enabled = true;
+        taskField.userInteractionEnabled = false;
+        timeField.userInteractionEnabled = false;
+        descriptionField.userInteractionEnabled = false;
         UIView.animateWithDuration(0.35, delay: 0.0, options: .CurveEaseOut, animations: { () -> Void in
             self.transform = CGAffineTransformMakeScale(0.2, 0.2);
         }) { (Bool) -> Void in
