@@ -17,6 +17,7 @@ let theEditDate = "editDate";
 let theUniqueID = "uniqueID";
 let theSavedCenter = "savedCenter";
 
+
 class NoteObject : NSObject, NSCoding {
     
     var taskString : String = "";
@@ -24,7 +25,7 @@ class NoteObject : NSObject, NSCoding {
     var descriptionString : String = "";
     var createdDate : NSDate = NSDate();
     var editDate : NSDate = NSDate();
-    var uniqueID : NSInteger = -1;
+    var uniqueID : NSString = "";
     var savedCenter : CGPoint = CGPointMake(0.0, 0.0)
     
     override init(){
@@ -39,6 +40,7 @@ class NoteObject : NSObject, NSCoding {
         self.savedCenter = aCenter;
         self.createdDate = NSDate();
         self.editDate = NSDate();
+        self.uniqueID = NSUUID().UUIDString;
             //TODO: - Define UNIQUE ID Creation -
         
     }
@@ -49,7 +51,7 @@ class NoteObject : NSObject, NSCoding {
         self.descriptionString = aDecoder.decodeObjectForKey(theDescriptionString) as! String;
         self.createdDate = aDecoder.decodeObjectForKey(theCreatedDate) as! NSDate;
         self.editDate = aDecoder.decodeObjectForKey(theCreatedDate) as! NSDate;
-        self.uniqueID = aDecoder.decodeIntegerForKey(theUniqueID);
+        self.uniqueID = aDecoder.decodeObjectForKey(theUniqueID) as! String;
         self.savedCenter = aDecoder.decodeCGPointForKey(theSavedCenter);
         super.init();
         
@@ -61,7 +63,7 @@ class NoteObject : NSObject, NSCoding {
         aCoder.encodeObject(description, forKey: theDescriptionString);
         aCoder.encodeObject(createdDate, forKey: theCreatedDate);
         aCoder.encodeObject(editDate, forKey: theEditDate);
-        aCoder.encodeInteger(uniqueID, forKey: theUniqueID);
+        aCoder.encodeObject(uniqueID, forKey: theUniqueID);
         aCoder.encodeCGPoint(savedCenter, forKey: theSavedCenter);
     }
     

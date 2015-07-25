@@ -9,7 +9,8 @@
 import Foundation
 import UIKit
 
-public class NotePad: UIView {
+public class NotePad: UIView, UITextFieldDelegate {
+    
     
     ///Button Outlets
     @IBOutlet var taskField: UITextField!
@@ -18,22 +19,35 @@ public class NotePad: UIView {
     @IBOutlet var noteBtn: UIButton!
     @IBOutlet var saveBtn: UIButton!
     @IBOutlet var deleteBtn: UIButton!
+    
+    
+    ///Variables
+
+    var noteObject : NoteObject!
     var parentView : UIView!
     
     ///Creating Note Pad Views
-    public func createInView(aView : UIView) -> NotePad{
+    func createInView(aView : UIView) -> NotePad{
         var xibArray : NSArray = NSBundle.mainBundle().loadNibNamed("NotePad", owner: self, options: nil);
         let notePad : NotePad = xibArray[0] as! NotePad;
         aView.addSubview(notePad);
         notePad.parentView = aView;
         return notePad;
     };
-    ///Action for Touching Note Pads and Buttons
+    //////Actions for Touching Note Pads and Buttons
+    
+    ///Making keyboard go away
+    public func textFieldShouldReturn(textField: UITextField) -> Bool {
+        timeField.endEditing(true);
+        return false;
+    }
+    
+    ///What happens when touching the note
     @IBAction func notePressed(){
         UIView.animateWithDuration(0.35, delay: 0.0, options: .CurveEaseIn, animations: { () -> Void in
             self.center = self.parentView.center;
             self.taskField.userInteractionEnabled = true;
-            self.timeField.userInteractionEnabled = true;
+            self.timeField.keyboardType = .NumberPad
             self.descriptionField.userInteractionEnabled = true;
             self.transform = CGAffineTransformMakeScale(1, 1);
             self.parentView.bringSubviewToFront(self)
@@ -42,8 +56,17 @@ public class NotePad: UIView {
         };
     }
     
+    ///What happens when touching save
     @IBAction func savePressed(){
+        //First, update the noteObject to contain the appropriate data
+        noteObject.taskString = taskField.text;
+        noteObject.timeString = timeField.text;
+        noteObject.descriptionString = descriptionField.text;
         
+        //Now save the note via the helper
+        NoteHelper().saveNote(noteObject);
+        
+        //Now modify the UI so your note goes into the UI properly
         noteBtn.enabled = true;
         taskField.userInteractionEnabled = false;
         timeField.userInteractionEnabled = false;
@@ -55,6 +78,7 @@ public class NotePad: UIView {
         };
     }
 
+    ///What happens when touching delete
     @IBAction func deletePressed(){
         self.removeFromSuperview();
     }

@@ -43,11 +43,21 @@
                                 <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jdR-Ww-t4F">
+                                <rect key="frame" x="44" y="206" width="98" height="41"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="setAlarmClock" destination="BYZ-38-t0r" eventType="touchUpInside" id="mY3-jq-IdY"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <connections>
                         <outlet property="addBtn" destination="ErX-Vz-DHg" id="iho-3b-6t5"/>
+                        <outlet property="clockButton" destination="jdR-Ww-t4F" id="E8T-Nl-qWP"/>
                         <outlet property="clockLabel" destination="0Ad-Uu-pPT" id="W1i-qn-XF7"/>
                     </connections>
                 </viewController>

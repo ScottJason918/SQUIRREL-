@@ -65,7 +65,7 @@
                     <rect key="frame" x="13" y="64" width="259" height="30"/>
                     <color key="backgroundColor" red="1" green="0.97016762509999999" blue="0.32612140899999997" alpha="1" colorSpace="calibratedRGB"/>
                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                    <textInputTraits key="textInputTraits"/>
+                    <textInputTraits key="textInputTraits" spellCheckingType="yes"/>
                 </textField>
                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Length of time for this task" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VxC-w5-L8r">
                     <rect key="frame" x="13" y="125" width="259" height="30"/>
