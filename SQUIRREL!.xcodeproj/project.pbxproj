@@ -15,6 +15,8 @@
 		33ADEFD51B57455600B28E1E /* SQUIRREL_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33ADEFD41B57455600B28E1E /* SQUIRREL_Tests.swift */; };
 		33ADEFE61B588DFE00B28E1E /* NotePad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33ADEFE51B588DFE00B28E1E /* NotePad.swift */; };
 		33ADEFE81B588FAB00B28E1E /* NotePad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33ADEFE71B588FAB00B28E1E /* NotePad.xib */; };
+		33C141A11B64461C0069FC21 /* SetTimer.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33C141A01B64461C0069FC21 /* SetTimer.xib */; };
+		33C141A31B6680C90069FC21 /* SetTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C141A21B6680C90069FC21 /* SetTimer.swift */; };
 		33E3200B1B5DD2F40096351D /* NoteObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E3200A1B5DD2F40096351D /* NoteObject.swift */; };
 		33E3200D1B5DDFC30096351D /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E3200C1B5DDFC30096351D /* Helper.swift */; };
 /* End PBXBuildFile section */
@@ -42,6 +44,8 @@
 		33ADEFD41B57455600B28E1E /* SQUIRREL_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SQUIRREL_Tests.swift; sourceTree = "<group>"; };
 		33ADEFE51B588DFE00B28E1E /* NotePad.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotePad.swift; sourceTree = "<group>"; };
 		33ADEFE71B588FAB00B28E1E /* NotePad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NotePad.xib; sourceTree = "<group>"; };
+		33C141A01B64461C0069FC21 /* SetTimer.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SetTimer.xib; sourceTree = "<group>"; };
+		33C141A21B6680C90069FC21 /* SetTimer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetTimer.swift; sourceTree = "<group>"; };
 		33E320081B5DCC690096351D /* DS-DIGII.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DS-DIGII.TTF"; sourceTree = "<group>"; };
 		33E3200A1B5DD2F40096351D /* NoteObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteObject.swift; sourceTree = "<group>"; };
 		33E3200C1B5DDFC30096351D /* Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
@@ -130,7 +134,9 @@
 				33ADEFE51B588DFE00B28E1E /* NotePad.swift */,
 				33E3200A1B5DD2F40096351D /* NoteObject.swift */,
 				33E3200C1B5DDFC30096351D /* Helper.swift */,
+				33C141A21B6680C90069FC21 /* SetTimer.swift */,
 				33ADEFE71B588FAB00B28E1E /* NotePad.xib */,
+				33C141A01B64461C0069FC21 /* SetTimer.xib */,
 			);
 			name = ExtendedClasses;
 			sourceTree = "<group>";
@@ -226,6 +232,7 @@
 			files = (
 				33ADEFE81B588FAB00B28E1E /* NotePad.xib in Resources */,
 				33ADEFC41B57455600B28E1E /* Main.storyboard in Resources */,
+				33C141A11B64461C0069FC21 /* SetTimer.xib in Resources */,
 				33ADEFC91B57455600B28E1E /* LaunchScreen.xib in Resources */,
 				33ADEFC61B57455600B28E1E /* Images.xcassets in Resources */,
 			);
@@ -249,6 +256,7 @@
 				33ADEFC11B57455600B28E1E /* ViewController.swift in Sources */,
 				33E3200D1B5DDFC30096351D /* Helper.swift in Sources */,
 				33ADEFE61B588DFE00B28E1E /* NotePad.swift in Sources */,
+				33C141A31B6680C90069FC21 /* SetTimer.swift in Sources */,
 				33ADEFBF1B57455600B28E1E /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

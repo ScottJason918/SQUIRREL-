@@ -10,7 +10,7 @@ import UIKit
 
 class ViewController: UIViewController, UITextFieldDelegate {
     
-
+    
     @IBOutlet var clockButton: UIButton!
     @IBOutlet var clockLabel : UILabel!
     @IBOutlet var addBtn : UIButton!
@@ -31,7 +31,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         updateClock();
         NSTimer(timeInterval: 0.5, target: self, selector: Selector(updateClock()), userInfo: nil, repeats: true);
     }
-
+    
     //MARK: - Interface Interaction Methods -
     ///Creating Note Pads
     @IBAction func createNotePad(){
@@ -75,7 +75,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
                     }
                 }
             }
-                break;
+            break;
             
         case .Changed:
             if(heldNotePad != nil) {
@@ -85,7 +85,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
             
         case .Ended, .Failed, .Cancelled:
             heldNotePad = nil;
-                break;
+            break;
         default:
             println("default");
             break;
@@ -94,15 +94,21 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     //MARK: - Clock Methods -
     
-    ///Setting Alarm Clock
-    @IBAction func setAlarmClock(){
+    ///Activating KitchenTimer
+    @IBAction func clockButtonPressed(){
+        let clock: SetTimer = SetTimer().createInView(self.view);
+        UIView.animateWithDuration(0.1, delay: 0.0, options: .CurveEaseInOut, animations: { () -> Void in
+            clock.center = self.view.center;
+            clock.transform = CGAffineTransformMakeScale(1, 1);
+            }) { (Bool) -> Void in
+                
+        }
+    }
         
-    }
-    
-    func updateClock() {
-        var dateFormatter = NSDateFormatter();
-        dateFormatter.dateFormat = "h:mm";
-        var theTime = dateFormatter.stringFromDate(NSDate());
-        clockLabel.text = theTime;
-    }
+        func updateClock() {
+            var dateFormatter = NSDateFormatter();
+            dateFormatter.dateFormat = "h:mm";
+            var theTime = dateFormatter.stringFromDate(NSDate());
+            clockLabel.text = theTime;
+        }
 }

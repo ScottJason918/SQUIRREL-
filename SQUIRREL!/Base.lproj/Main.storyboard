@@ -39,7 +39,7 @@
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="12:35" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Ad-Uu-pPT">
                                 <rect key="frame" x="44" y="206" width="98" height="42"/>
-                                <fontDescription key="fontDescription" name="DS-Digital" family="DS-Digital" pointSize="32"/>
+                                <fontDescription key="fontDescription" name="DS-Digital" family="DS-Digital" pointSize="38"/>
                                 <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -49,7 +49,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="setAlarmClock" destination="BYZ-38-t0r" eventType="touchUpInside" id="mY3-jq-IdY"/>
+                                    <action selector="clockButtonPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZtJ-Vc-IZS"/>
                                 </connections>
                             </button>
                         </subviews>
