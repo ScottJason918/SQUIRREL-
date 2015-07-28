@@ -11,6 +11,7 @@ import UIKit
 
 public class SetTimer: UIView {
     
+    var parentVC : ViewController!
     var parentView : UIView!
     
     ///Outlets
@@ -45,7 +46,7 @@ public class SetTimer: UIView {
     }
     ///Start button
     @IBAction func startButtonPressed() {
-        
+        parentVC.clockLabel.text = timerLabel.text; 
         self.removeFromSuperview();
     }
 }

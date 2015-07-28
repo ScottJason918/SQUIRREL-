@@ -97,6 +97,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     ///Activating KitchenTimer
     @IBAction func clockButtonPressed(){
         let clock: SetTimer = SetTimer().createInView(self.view);
+        clock.parentVC = self;
         UIView.animateWithDuration(0.1, delay: 0.0, options: .CurveEaseInOut, animations: { () -> Void in
             clock.center = self.view.center;
             clock.transform = CGAffineTransformMakeScale(1, 1);
