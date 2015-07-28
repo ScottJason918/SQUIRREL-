@@ -14,8 +14,7 @@ public class SetTimer: UIView {
     var parentView : UIView!
     
     ///Outlets
-    @IBOutlet var minuteLabel: UILabel!
-    @IBOutlet var secondsLabel: UILabel!
+    @IBOutlet var timerLabel: UILabel!
     @IBOutlet var timeStepper : UIStepper!
     @IBOutlet var startButton: UIButton!
     
@@ -30,9 +29,18 @@ public class SetTimer: UIView {
     
     
     ///Actions
+    
     ///Changing Timer Value
     @IBAction func stepperValueHasChanged(sender: UIStepper){
-        minuteLabel.text = (Int(timeStepper.value).description + ":");
+        var hour = Int(0);
+        var minute = Int(sender.value);
+        
+        while (minute > 60){
+            minute -= 60;
+            hour += 1;
+        }
+        
+        timerLabel.text = (String(format: "%i:%02d", hour, minute));
         
     }
     ///Start button

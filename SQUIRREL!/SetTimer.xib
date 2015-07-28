@@ -6,7 +6,6 @@
     <customFonts key="customFonts">
         <mutableArray key="DS-DIGI.TTF">
             <string>DS-Digital</string>
-            <string>DS-Digital</string>
         </mutableArray>
     </customFonts>
     <objects>
@@ -19,17 +18,16 @@
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Jason'sFridgeTimerBox" translatesAutoresizingMaskIntoConstraints="NO" id="tEo-WK-Hli">
                     <rect key="frame" x="58" y="31" width="196" height="84"/>
                 </imageView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="00:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uf9-XA-Z2j">
-                    <rect key="frame" x="84" y="47" width="72" height="51"/>
-                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                    <fontDescription key="fontDescription" name="DS-Digital" family="DS-Digital" pointSize="27"/>
-                    <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aE6-Rr-APx">
-                    <rect key="frame" x="156" y="47" width="72" height="51"/>
-                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                    <fontDescription key="fontDescription" name="DS-Digital" family="DS-Digital" pointSize="27"/>
+                <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" wraps="YES" maximumValue="1440" translatesAutoresizingMaskIntoConstraints="NO" id="H13-qo-LuB">
+                    <rect key="frame" x="58" y="123" width="94" height="29"/>
+                    <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <action selector="stepperValueHasChanged:" destination="iN0-l3-epB" eventType="valueChanged" id="oK3-aM-3Yd"/>
+                    </connections>
+                </stepper>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8FE-r2-hmz">
+                    <rect key="frame" x="58" y="31" width="196" height="84"/>
+                    <fontDescription key="fontDescription" name="DS-Digital" family="DS-Digital" pointSize="70"/>
                     <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
@@ -43,22 +41,14 @@
                         <action selector="startButtonPressed" destination="iN0-l3-epB" eventType="touchUpInside" id="D5O-77-o1j"/>
                     </connections>
                 </button>
-                <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="200" translatesAutoresizingMaskIntoConstraints="NO" id="H13-qo-LuB">
-                    <rect key="frame" x="58" y="123" width="94" height="29"/>
-                    <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                    <connections>
-                        <action selector="stepperValueHasChanged:" destination="iN0-l3-epB" eventType="touchUpInside" id="IBD-mL-sKb"/>
-                    </connections>
-                </stepper>
             </subviews>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
-                <outlet property="minuteLabel" destination="uf9-XA-Z2j" id="9Vk-Z2-BLi"/>
-                <outlet property="secondsLabel" destination="aE6-Rr-APx" id="heV-xN-vVf"/>
                 <outlet property="startButton" destination="KUT-Ae-Yfi" id="RZ8-kC-oaC"/>
-                <outlet property="timeStepper" destination="H13-qo-LuB" id="fmH-L0-o3D"/>
+                <outlet property="timeStepper" destination="H13-qo-LuB" id="G2T-CN-LKP"/>
+                <outlet property="timerLabel" destination="8FE-r2-hmz" id="PYR-kW-UVY"/>
             </connections>
-            <point key="canvasLocation" x="337" y="328"/>
+            <point key="canvasLocation" x="138" y="319"/>
         </view>
     </objects>
     <resources>

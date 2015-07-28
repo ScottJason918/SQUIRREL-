@@ -104,11 +104,11 @@ class ViewController: UIViewController, UITextFieldDelegate {
                 
         }
     }
-        
-        func updateClock() {
-            var dateFormatter = NSDateFormatter();
-            dateFormatter.dateFormat = "h:mm";
-            var theTime = dateFormatter.stringFromDate(NSDate());
-            clockLabel.text = theTime;
-        }
+    
+    func updateClock() {
+        var dateFormatter = NSDateFormatter();
+        dateFormatter.dateFormat = "h:mm";
+        var theTime = dateFormatter.stringFromDate(NSDate());
+        clockLabel.text = theTime;
+    }
 }
