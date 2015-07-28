@@ -13,11 +13,14 @@ public class SetTimer: UIView {
     
     var parentVC : ViewController!
     var parentView : UIView!
+    var timer = NSTimer();
     
     ///Outlets
     @IBOutlet var timerLabel: UILabel!
     @IBOutlet var timeStepper : UIStepper!
     @IBOutlet var startButton: UIButton!
+    var counterHour = 0;
+    var counterMinute = 0;
     
     func createInView(aView : UIView) -> SetTimer{
         var xibArray : NSArray = NSBundle.mainBundle().loadNibNamed("SetTimer", owner: self, options: nil);
@@ -30,23 +33,36 @@ public class SetTimer: UIView {
     
     
     ///Actions
+    //Updating Counter for Timer
+    func updateCounter(){
+        if(counterHour > 0 && counterMinute == 0){
+            counterHour--;
+            counterMinute = 59;
+        }else{
+            counterMinute--;
+        }
+        println(counterHour);
+        println(counterMinute);
+    }
     
     ///Changing Timer Value
     @IBAction func stepperValueHasChanged(sender: UIStepper){
         var hour = Int(0);
         var minute = Int(sender.value);
         
-        while (minute > 60){
+        while (minute > 59){
             minute -= 60;
             hour += 1;
         }
-        
+        counterHour = hour;
+        counterHour = minute;
         timerLabel.text = (String(format: "%i:%02d", hour, minute));
         
     }
     ///Start button
     @IBAction func startButtonPressed() {
-        parentVC.clockLabel.text = timerLabel.text; 
+        parentVC.clockLabel.text = timerLabel.text;
+        timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: ("updateCounter"), userInfo: nil, repeats: true);
         self.removeFromSuperview();
     }
 }
