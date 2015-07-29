@@ -41,8 +41,17 @@ public class SetTimer: UIView {
         }else{
             counterMinute--;
         }
-        println(counterHour);
-        println(counterMinute);
+        parentVC.clockLabel.text = (String(format: "%i:%02d", counterHour, counterMinute));
+        if(counterMinute == 05){
+            let alertController = UIAlertController(title: "Time Warning", message:
+                "You have 5 minutes left!", preferredStyle: UIAlertControllerStyle.Alert)
+            alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Default,handler: nil))
+            parentVC.presentViewController(alertController, animated: true, completion: nil);
+        }
+        if(counterHour == 0 && counterMinute == 0){
+            timer.invalidate();
+            parentVC.updateClock();
+        }
     }
     
     ///Changing Timer Value
@@ -55,14 +64,18 @@ public class SetTimer: UIView {
             hour += 1;
         }
         counterHour = hour;
-        counterHour = minute;
+        counterMinute = minute;
         timerLabel.text = (String(format: "%i:%02d", hour, minute));
         
+    }
+    ///Cancel Button
+    @IBAction func cancelButtonPressed(){
+        self.removeFromSuperview();
     }
     ///Start button
     @IBAction func startButtonPressed() {
         parentVC.clockLabel.text = timerLabel.text;
-        timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: ("updateCounter"), userInfo: nil, repeats: true);
+        timer = NSTimer.scheduledTimerWithTimeInterval(5, target: self, selector: ("updateCounter"), userInfo: nil, repeats: true);
         self.removeFromSuperview();
     }
 }
