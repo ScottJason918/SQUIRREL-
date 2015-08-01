@@ -47,6 +47,9 @@
                         <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
+                    <connections>
+                        <action selector="cancelButtonPressed" destination="iN0-l3-epB" eventType="touchUpInside" id="fea-Ew-3Qb"/>
+                    </connections>
                 </button>
             </subviews>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>

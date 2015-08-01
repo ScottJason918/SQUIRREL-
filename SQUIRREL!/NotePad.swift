@@ -55,6 +55,13 @@ public class NotePad: UIView, UITextFieldDelegate {
             self.noteBtn.enabled = false;
         };
     }
+    ///Changing color to red to symbolize urgent
+    @IBAction func urgentNote(){
+        self.backgroundColor = UIColor.redColor();
+        self.taskField.backgroundColor = UIColor.redColor();
+        self.timeField.backgroundColor = UIColor.redColor();
+        self.descriptionField.backgroundColor = UIColor.redColor();
+    }
     
     ///What happens when touching save
     @IBAction func savePressed(){

@@ -17,7 +17,7 @@ class NoteHelper {
         if(NSUserDefaults.standardUserDefaults().objectForKey("SavedNotes") != nil) {
             var loadedData: NSData = NSUserDefaults.standardUserDefaults().objectForKey("SavedNotes") as! NSData;
             var loadedNotes: AnyObject? = NSKeyedUnarchiver.unarchiveObjectWithData(loadedData);
-            println(loadedNotes)
+            //println(loadedNotes)
             self.allNotes = loadedNotes as? [NoteObject] ?? [];
         }
         

@@ -41,7 +41,6 @@ class NoteObject : NSObject, NSCoding {
         self.createdDate = NSDate();
         self.editDate = NSDate();
         self.uniqueID = NSUUID().UUIDString;
-            //TODO: - Define UNIQUE ID Creation -
         
     }
     

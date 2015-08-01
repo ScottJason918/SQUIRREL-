@@ -26,7 +26,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         
         super.viewDidLoad();
         NoteHelper().loadNotes();
-        println(NoteHelper().allNotes);
+        //println(NoteHelper().allNotes);
         
         updateClock();
         NSTimer(timeInterval: 0.5, target: self, selector: Selector(updateClock()), userInfo: nil, repeats: true);
